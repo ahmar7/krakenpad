@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { Helmet } from "react-helmet";
+import Launchpad from "./components/Launchpad";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet>
+        <script src="./assets/js/mian.js" type="text/javascript" />
+      </Helmet>
+      <Launchpad />
+      <Helmet>
+        <script src="./assets/js/app.js" type="text/javascript" />
+      </Helmet>
     </div>
   );
 }
